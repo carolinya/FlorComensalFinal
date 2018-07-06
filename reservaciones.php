@@ -144,7 +144,7 @@
                         <div class="form-group col-md-2">
                             <label for="inputPassword4">Hora</label>
                             <br>
-                            <input type="time" required>
+                            <input type="time" name="hora" max="21:00:00" min="08:00:00" required>
                         </div>
                     </div>
                 </form>
