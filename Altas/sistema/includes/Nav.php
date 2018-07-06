@@ -18,7 +18,7 @@
 				<li class="principal">
 					<a href="#">Registro Platillos</a>
 					<ul>
-						<li><a href="#">Nuevos Platillos</a></li>
+						<li><a href="platillos.php">Nuevos Platillos</a></li>
 						<li><a href="#">Lista de Platillos</a></li>
 					</ul>
 				</li>
