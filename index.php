@@ -71,19 +71,20 @@
 			<h1 id="fh5co-logo"><a href="index.html">LA FLOR DEL COMENSAL</a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li class="fh5co-active"><a href="index.html">ESPECIALIDADES DE LA CASA</a></li>
-					<li><a href="reservaciones.php">RESERVACIONES</a></li>
-											<br>
-										    <br>
-											<br>
-											<br>
-											<br>
-											<br>
-											<br>
-											<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
 
-
-
+					<li><a href="reservaciones.php"><h4>RESERVACIONES</h4></a></li>
+											<br>
+										  <br>
+											<br>
+											<br>
+											<br>
+											<br>
 							<li><a href="./Altas/Login.php">LOGIN</a></li>
 
 				</ul>
