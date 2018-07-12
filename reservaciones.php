@@ -99,29 +99,29 @@
                         <h2>RESERVACION</h2>
                     </div>
                 </div>
-                <form>
+                <form action="pedidos.php" method="POST" >
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Nombre Completo</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre" required>
+                            <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Correo</label>
-                            <input type="email" class="form-control" id="inputPassword4" placeholder="Correo" required>
+                            <input type="email" class="form-control" name="correo" placeholder="Correo" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputEmail4">Celular</label>
-                            <input type="tel" class="form-control" pattern="[0-9]{10}" placeholder="Celular" required>
+                            <input type="tel" class="form-control" name="celular" pattern="[0-9]{10}" placeholder="Celular" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputPassword4">Numero de Personas</label>
-                            <input type="number" name="quantity" min="1" max="500" class="form-control" id="inputPassword4" placeholder="Numero de Personas" required>
+                            <input type="number" name="personas" min="1" max="500" class="form-control" id="inputPassword4" placeholder="Numero de Personas" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputPassword4">Tipo de Evento</label>
-                            <select id="inputState" class="form-control" required>
+                            <select name="tipo" class="form-control" required>
                                     <option selected></option>
                                     <option>Casual</option>
                                     <option>Negocios</option>
@@ -134,19 +134,18 @@
                         <div class="form-group col-md-2">
                             <label for="inputPassword4">Fecha</label>
                             <br>
-                            <form action="" method="">
-                                <input type="date" required>
-                            </form>
+                              <input type="date" name="fecha" required>
                             <br>
-                            <br>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                         <div class="form-group col-md-2">
-                            <label for="inputPassword4">Hora</label>
-                            <br>
-                            <input type="time" name="hora" max="21:00:00" min="08:00:00" required>
+                                <label for="inputPassword4">Hora</label>
+                                <br>
+                                <input type="time" name="hora" max="21:00:00" min="08:00:00" required>
                         </div>
                     </div>
+                      <br>
+                      <br>
+                      <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
                 </form>
             </div>
             <div class="fh5co-more-contact">

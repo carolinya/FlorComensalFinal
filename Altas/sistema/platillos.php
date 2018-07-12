@@ -30,6 +30,8 @@ if(!empty($_POST))
         }
     }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,16 +51,15 @@ if(!empty($_POST))
             <div class="alert">
                 <?php echo isset($alert)? $alert : ''; ?>
             </div>
-            <form action="" method="post">
+            <form action="imagen.php" method="POST" >
                 <label for="nombre">Nombre del Platillo</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Platillo">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Platillo" required>
                 <label for="correo">Precio</label>
-                <input type="text" name="correo" id="correo" placeholder="Precio">
+                <input type="text" name="precio" id="correo" placeholder="Precio" required>
                 <label for="usuario">Descripcion</label>
-                <textarea rows="10" cols="42" name="comment" form="usrform">
-                  </textarea>
-
-                <input type="submit" value="Agregar Nuevo Usuario" class="btn_save">
+                <textarea rows="10" cols="42" name="comentario" required>
+                </textarea>
+                <input type="submit" value="Agregar a la Base de Datos" class="btn_save">
             </form>
         </div>
     </section>
