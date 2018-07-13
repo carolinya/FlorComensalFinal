@@ -1,4 +1,10 @@
 <?php
+
+    session_start();
+if($_SESSION['rol'] != 1)
+{
+    header("location: ./");
+}
     include"../conexion.php";
 ?>
 <!DOCTYPE html>
@@ -42,7 +48,7 @@
             $total_paginas = ceil($total_registro/$por_pagina);
             
             $query = mysqli_query($conection,"SELECT u.idusuario,u.nombre,u.correo,u.usuario,r.rol FROM usuario u INNER JOIN rol r ON u.rol = r.idrol WHERE estatus = 1 ORDER BY u.idusuario ASC LIMIT $desde,$por_pagina");
-            
+            mysqli_close($conection);            
             $result = mysqli_num_rows($query);
             
             if($result > 0)

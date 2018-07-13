@@ -1,4 +1,10 @@
 <?php 
+    
+    session_start();
+if($_SESSION['rol'] != 1)
+{
+    header("location: ./");
+}
     include"../conexion.php";
 
     if(!empty($_POST))
@@ -39,12 +45,14 @@
             }
         }
     }
+        mysqli_close($conection);
 }
     
     //Mostrar Datos
     if(empty($_GET['id']))
     {
         header('location: Lista_Usuario.php');
+        mysqli_close($conection);
     }
     $iduser = $_GET['id'];
     $sql=mysqli_query($conection,"SELECT u.idusuario, u.nombre,u.correo,u.usuario,(u.rol) as idrol,(r.rol)
@@ -52,6 +60,7 @@
                                   INNER JOIN rol r
                                   on u.rol = r.idrol
                                   WHERE idusuario=$iduser");
+    mysqli_close($conection);
     $result_sql = mysqli_num_rows($sql);
     if($result_sql == 0){
         header('location: Lista_Usuario.php');
@@ -109,7 +118,9 @@
 		        <label for="rol">Tipo Usuario</label>
 		        
 		        <?php 
+                include"../conexion.php";
                 $query_rol = mysqli_query($conection,"SELECT * FROM rol");
+                mysqli_close($conection);
                 $result_rol = mysqli_num_rows($query_rol);
                 ?>
                 
