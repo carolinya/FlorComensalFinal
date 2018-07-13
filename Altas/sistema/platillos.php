@@ -51,14 +51,16 @@ if(!empty($_POST))
             <div class="alert">
                 <?php echo isset($alert)? $alert : ''; ?>
             </div>
-            <form action="imagen.php" method="POST" >
+            <form action="imagen.php" method="POST" enctype="multipart/form-data">
                 <label for="nombre">Nombre del Platillo</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre del Platillo" required>
                 <label for="correo">Precio</label>
                 <input type="text" name="precio" id="correo" placeholder="Precio" required>
                 <label for="usuario">Descripcion</label>
-                <textarea rows="10" cols="42" name="comentario" required>
+                <textarea rows="10" cols="42" name="descripcion" required>
                 </textarea>
+                <label for="correo">Foto</label>
+                <input type="file" name="imagen" required>
                 <input type="submit" value="Agregar a la Base de Datos" class="btn_save">
             </form>
         </div>
