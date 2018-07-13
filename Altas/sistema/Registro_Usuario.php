@@ -1,5 +1,5 @@
-<?php 
-    
+<?php
+
     session_start();
 if($_SESSION['rol'] != 1)
 {
@@ -14,15 +14,15 @@ if($_SESSION['rol'] != 1)
     {
         $alert = '<p class="msn_error">Todos los campos son abligatorios.</p>';
     }else{
-        
+
         $nombre = $_POST['nombre'];
         $email = $_POST['correo'];
         $user = $_POST['usuario'];
         $clave = md5($_POST['clave']);
         $rol = $_POST['rol'];
-        
+
         $query = mysqli_query($conection,"SELECT*FROM usuario WHERE usuario = '$user' OR correo = '$email'");
-        mysqli_close($conection);
+
         $result = mysqli_fetch_array($query);
         if($result > 0){
             $alert='<p class="msg_error">El correo o el usuario ya existe.</p>';
@@ -34,6 +34,7 @@ if($_SESSION['rol'] != 1)
             }else{
                 $alert='<p class="msg_error">Error al crear el usuario.</p>';
             }
+              mysqli_close($conection);
         }
     }
 }
@@ -66,7 +67,7 @@ if($_SESSION['rol'] != 1)
                 <label for="clave">Contraseña</label>
                 <input type="password" name="clave" id="clave" placeholder="Contraseña">
                 <label for="rol">Tipo Usuario</label>
-                <?php 
+                <?php
                 include"../conexion.php";
                 $query_rol = mysqli_query($conection,"SELECT * FROM rol");
                 mysqli_close($conection);
@@ -79,10 +80,10 @@ if($_SESSION['rol'] != 1)
                 ?>
                 <option value="<?php echo $rol["idrol"];?>"><?php echo $rol["rol"] ?></option>
                 <?php
-                }   
+                }
                 }
                 ?>
-                
+
 		        </select>
                 <input type="submit" value="Agregar Nuevo Usuario" class="btn_save">
             </form>
