@@ -1,4 +1,9 @@
 <?php
+   session_start();
+if($_SESSION['rol'] == 3)
+{
+  //  header("location: ./");
+}
     include"../conexion.php";
 ?>
 <!DOCTYPE html>

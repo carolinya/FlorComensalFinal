@@ -1,6 +1,6 @@
 <nav>
 			<ul>
-				<li><a href="sistema/salir.php">Inicio</a></li>
+				<li><a href="index.php">Inicio</a></li>
 				<li class="principal">
 				<?php 
                     if($_SESSION['rol'] == 1){
