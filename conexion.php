@@ -1,4 +1,4 @@
 <?php
-$con=mysqli_connect('localhost','root','tlahuitoltepec','laflor');
+$con=mysqli_connect('localhost','root','','comensal');
 
  ?>

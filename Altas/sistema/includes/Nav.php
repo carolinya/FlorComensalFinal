@@ -2,10 +2,10 @@
 			<ul>
 				<li><a href="index.php">Inicio</a></li>
 				<li class="principal">
-				<?php 
+				<?php
                     if($_SESSION['rol'] == 1){
                     ?>
-				
+
 					<a href="#">Empleados</a>
 					<ul>
 						<li><a href="Registro_Usuario.php">Registro de Empleados</a></li>
@@ -13,23 +13,22 @@
 					</ul>
 				</li>
 				<?php } ?>
-				<?php 
+				<?php
                     if($_SESSION['rol'] == 2 || $_SESSION['rol']==1){
-                        
-                        
-                      ?>  
+
+
+                      ?>
 				<li class="principal">
-					<a href="#">Clientes</a>
+					<a href="#">Reservaciones</a>
 					<ul>
-						<li><a href="#">Reservaciones</a></li>
-						<li><a href="#">Lista de reservaciones</a></li>
+						<li><a href="lista_reservaciones.php">Lista de Reservaciones</a></li>
 					</ul>
 				</li>
 				<?php }  ?>
-				<?php 
+				<?php
                     if($_SESSION['rol'] == 3 || $_SESSION['rol']==1){
-                        
-                      ?> 
+
+                      ?>
 				<li class="principal">
 					<a href="#">Registro Platillos</a>
 					<ul>
@@ -38,10 +37,10 @@
 					</ul>
 				</li>
 				<?php }  ?>
-				<?php 
+				<?php
                     if($_SESSION['rol'] ==4 ){
                         header("location: Cliente/reservaciones.php");
-                      ?>  
+                      ?>
 				<li class="principal">
 					<a href="#">Ordenar Pedidos</a>
 					<ul>
@@ -50,10 +49,10 @@
 					</ul>
 				</li>
 				<?php }  ?>
-				<?php 
+				<?php
                     if($_SESSION['rol'] == 3 || $_SESSION['rol']==1){
-                        
-                      ?> 
+
+                      ?>
 				<li class="principal">
 					<a href="#">Facturas</a>
 					<ul>
