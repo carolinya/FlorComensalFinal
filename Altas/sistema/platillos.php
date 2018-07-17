@@ -48,7 +48,7 @@ if (!empty($_POST)) {
 $(document).ready(function(){
      $("#texto").toggle(0);
  $("#cambia").click(function(){
-    
+
  $("#texto").toggle(1000);
  });
 });
@@ -81,15 +81,15 @@ $(document).ready(function(){
                 <?php echo isset($alert) ? $alert : ''; ?>
             </div>
 
-            <form action="" method="post">
+            <form action="platillo.php" method="POST" enctype="multipart/form-data">
                 <label for="nombre">Nombre del Platillo</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Platillo">
+                <input type="text" name="nombre" placeholder="Nombre del Platillo">
                 <label for="correo">Precio</label>
-                <input type="text" name="correo" id="correo" placeholder="Precio">
+                <input type="text" name="precio" placeholder="Precio">
                 <label for="usuario">Descripcion</label>
-                <textarea rows="10" cols="42" name="comment" form="usrform">
-                  </textarea>
-
+                <textarea rows="10" cols="42" name="come">
+                </textarea>
+                <input type="file" name="imagen"/>
                 <input type="submit" value="Agregar Nuevo Usuario" class="btn_save">
             </form>
 
@@ -98,22 +98,22 @@ $(document).ready(function(){
         </div>
 </div>
 <div class="form_register">
-            <a id="cambia2"><h2>POSTRES</h2></a>
+            <a id="cambia2"><h2>BEBIDAS</h2></a>
             <hr>
             <div id="texto2">
             <div class="alert">
                 <?php echo isset($alert) ? $alert : ''; ?>
             </div>
 
-            <form action="" method="post">
+            <form action="bebidas.php" method="POST" enctype="multipart/form-data">
                 <label for="nombre">Nombre del Platillo</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Platillo">
+                <input type="text" name="nombre" placeholder="Nombre del Platillo">
                 <label for="correo">Precio</label>
-                <input type="text" name="correo" id="correo" placeholder="Precio">
+                <input type="text" name="precio" placeholder="Precio">
                 <label for="usuario">Descripcion</label>
-                <textarea rows="10" cols="42" name="comment" form="usrform">
-                  </textarea>
-
+                <textarea rows="10" cols="42" name="come">
+                </textarea>
+                <input type="file" name="imagen"/>
                 <input type="submit" value="Agregar Nuevo Usuario" class="btn_save">
             </form>
 
@@ -122,22 +122,22 @@ $(document).ready(function(){
         </div>
 </div>
 <div class="form_register">
-            <a id="cambia3"><h2>BEBIDAS</h2></a>
+            <a id="cambia3"><h2>POSTRES</h2></a>
             <hr>
             <div id="texto3">
             <div class="alert">
                 <?php echo isset($alert) ? $alert : ''; ?>
             </div>
 
-            <form action="" method="post">
+            <form action="postres.php" method="POST" enctype="multipart/form-data">
                 <label for="nombre">Nombre del Platillo</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Platillo">
+                <input type="text" name="nombre" placeholder="Nombre del Platillo">
                 <label for="correo">Precio</label>
-                <input type="text" name="correo" id="correo" placeholder="Precio">
+                <input type="text" name="precio" placeholder="Precio">
                 <label for="usuario">Descripcion</label>
-                <textarea rows="10" cols="42" name="comment" form="usrform">
-                  </textarea>
-
+                <textarea rows="10" cols="42" name="come">
+                </textarea>
+                <input type="file" name="imagen"/>
                 <input type="submit" value="Agregar Nuevo Usuario" class="btn_save">
             </form>
 
