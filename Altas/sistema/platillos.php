@@ -48,6 +48,7 @@ if (!empty($_POST)) {
 $(document).ready(function(){
      $("#texto").toggle(0);
  $("#cambia").click(function(){
+    
  $("#texto").toggle(1000);
  });
 });
@@ -73,7 +74,7 @@ $(document).ready(function(){
     <section id="container">
 
         <div class="form_register">
-            <a id="#cambia" href="#"><h2>PLATILLOS</h2></a>
+            <a id="cambia"><h2>PLATILLOS</h2></a>
             <hr>
             <div id="texto">
             <div class="alert">
@@ -97,7 +98,7 @@ $(document).ready(function(){
         </div>
 </div>
 <div class="form_register">
-            <a id="#cambia2" href="#"><h2>POSTRES</h2></a>
+            <a id="cambia2"><h2>POSTRES</h2></a>
             <hr>
             <div id="texto2">
             <div class="alert">
@@ -121,7 +122,7 @@ $(document).ready(function(){
         </div>
 </div>
 <div class="form_register">
-            <a id="#cambia3" href="#"><h2>BEBIDAS</h2></a>
+            <a id="cambia3"><h2>BEBIDAS</h2></a>
             <hr>
             <div id="texto3">
             <div class="alert">
