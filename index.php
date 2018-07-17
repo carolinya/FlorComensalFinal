@@ -37,6 +37,9 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
+	<!-- Estas son para el carrusel  -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	 <link href="full-slider.css" rel="stylesheet">
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
@@ -96,65 +99,84 @@
 
 							<!--*********Carrusel**********-->
 			<div id="fh5co-main">
-			<div class="carousel-inner">
-				<aside id="fh5co-hero" class="js-fullheight">
-					<div class="flexslider js-fullheight">
-						<ul class="slides ">
-					   	<li class="d-block w-100" alt="Imagen responsive" style="background-image: url(images/carneroja.jpg);">
-					   		<div class="overlay"></div>
-					   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+			<header>
+            <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#carouselExampleIndicators">
+                    </li>
+                    <li data-slide-to="1" data-target="#carouselExampleIndicators">
+                    </li>
+                    <li data-slide-to="2" data-target="#carouselExampleIndicators">
+                    </li>
+                     <li data-slide-to="3" data-target="#carouselExampleIndicators">
+                    </li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <!-- Slide One - Set the background image for this slide in the line below -->
+                    <div class="carousel-item active" style="background-image: url('images/QUINTONIL.png')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>
+                                First Slide
+                            </h3>
+                            <p>
+                                This is a description for the first slide.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Slide Two - Set the background image for this slide in the line below -->
+                    <div class="carousel-item" style="background-image: url('images/resto.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>
+                                Second Slide
+                            </h3>
+                            <p>
+                                This is a description for the second slide.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Slide Three - Set the background image for this slide in the line below -->
+                    <div class="carousel-item" style="background-image: url('images/tmb.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>
+                                Third Slide
+                            </h3>
+                            <p>
+                                This is a description for the third slide.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Slide Four - Set the background image for this slide in the line below -->
 
+                    <div class="carousel-item" style="background-image: url('images/pay.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>
+                                Third Slide
+                            </h3>
+                            <p>
+                                This is a description for the third slide.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleIndicators" role="button">
+                    <span aria-hidden="true" class="carousel-control-prev-icon">
+                    </span>
+                    <span class="sr-only">
+                        Previous
+                    </span>
+                </a>
+                <a class="carousel-control-next" data-slide="next" href="#carouselExampleIndicators" role="button">
+                    <span aria-hidden="true" class="carousel-control-next-icon">
+                    </span>
+                    <span class="sr-only">
+                        Next
+                    </span>
+                </a>
+            </div>
+        </header>
+			</div>
 
-
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				   	<li class="d-block w-100" style="background-image: url(images/carnepapas.jpg);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-
-
-
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-						<li class="d-block w-100" style="background-image: url(images/pay.jpg);">
-					   		<div class="overlay"></div>
-						   		<div class="container-fluid">
-						   			<div class="row">
-							   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-
-
-
-							   			</div>
-							   		</div>
-						   		</div>
-				   	</li>
-
-				   	<li class="d-block w-100" style="background-image: url(images/img_bg_3.jpg);">
-				   		<div class="overlay">hola como estas </div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-
-
-
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				  	</ul>
-			  	</div>
-			</aside>
 </div>
-			</div></div>
-
 <!--------------------------------------------------------------------------------------------------- -->
 
 
@@ -162,7 +184,9 @@
 
 
 
-
+	<!-- jQuery   Estas son para el carrusel -->
+	<script src="js/jqe.js"></script>
+	<script src="js/buu.js"></script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
