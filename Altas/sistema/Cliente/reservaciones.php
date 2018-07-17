@@ -142,6 +142,13 @@
     </div>
 
 <?php include "include/scrips.php"; ?>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $("#fh5co-main").load('platillo.php');
+        });
+    
+    </script>
 </body>
 
 </html>
