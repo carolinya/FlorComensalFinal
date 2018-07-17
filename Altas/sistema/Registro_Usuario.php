@@ -1,12 +1,10 @@
 <?php
-
     session_start();
 if($_SESSION['rol'] != 1)
 {
     header("location: ./");
 }
     include"../conexion.php";
-
     if(!empty($_POST))
     {
     $alert='';
@@ -14,15 +12,12 @@ if($_SESSION['rol'] != 1)
     {
         $alert = '<p class="msn_error">Todos los campos son abligatorios.</p>';
     }else{
-
         $nombre = $_POST['nombre'];
         $email = $_POST['correo'];
         $user = $_POST['usuario'];
         $clave = md5($_POST['clave']);
         $rol = $_POST['rol'];
-
         $query = mysqli_query($conection,"SELECT*FROM usuario WHERE usuario = '$user' OR correo = '$email'");
-
         $result = mysqli_fetch_array($query);
         if($result > 0){
             $alert='<p class="msg_error">El correo o el usuario ya existe.</p>';
