@@ -1,4 +1,4 @@
 <?php
-$con=mysqli_connect('localhost','root','RARO97','comolaflro');
+$con=mysqli_connect('localhost','root','','comensal');
 
  ?>
