@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 
 session_start();
 //session_destroy();
@@ -9,13 +8,13 @@ $product_ids = array();
 //check if Add to Cart button has been submitted
 if(filter_input(INPUT_POST, 'add_to_cart')){
     if(isset($_SESSION['shopping_cart'])){
-
+        
         //keep track of how mnay products are in the shopping cart
         $count = count($_SESSION['shopping_cart']);
-
+        
         //create sequantial array for matching array keys to products id's
         $product_ids = array_column($_SESSION['shopping_cart'], 'id');
-
+        
         if (!in_array(filter_input(INPUT_GET, 'id'), $product_ids)){
         $_SESSION['shopping_cart'][$count] = array
             (
@@ -23,7 +22,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
                 'nombre' => filter_input(INPUT_POST, 'nombre'),
                 'precio' => filter_input(INPUT_POST, 'precio'),
                 'cantidad' => filter_input(INPUT_POST, 'cantidad')
-            );
+            );   
         }
         else { //product already exists, increase quantity
             //match array key to id of the product being added to the cart
@@ -34,7 +33,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
                 }
             }
         }
-
+        
     }
     else { //if shopping cart doesn't exist, create first product with array key 0
         //create array using submitted form data, start from key 0 and fill it with values
@@ -88,8 +87,8 @@ function pre_r($array){
 
         <?php
 
-        $connect = mysqli_connect('localhost', 'root', '', 'comensal');
-        $query = 'SELECT * FROM platillos ORDER by imagen_id ASC';
+        $connect = mysqli_connect('localhost', 'root', 'RARO97', 'ko');
+        $query = 'SELECT * FROM productos ORDER by id ASC';
         $result = mysqli_query($connect, $query);
 
 
@@ -99,31 +98,29 @@ function pre_r($array){
                 //print_r($product);
                 ?>
                 <div class="col-md-4 mt-5">
-
+                         
                         <div class="card text-center">
-              <img src="data:image/jpg;base64,<?php echo base64_encode($product['imagen']); ?>" class="img-responsive"/>
+              <img src="im/<?php echo $product['image']; ?>" class="img-responsive"/>
         <div class="card-body">
-
+            
             <h4 class="text-capitalize"><?php echo $product['nombre']; ?></h4>
           <hr>
           <h5>Descripcion</h5>
-          <?php
-            echo $product['descripcion'];
-           ?>
+                  <p>Lorem ipsum dolor sit amet, altera propriae iudicabit eos ne. Vel ut accusam tacimates, prima oratio ius ea.</p>
           <p>
             <button type="" class="btn btn-outline" id="precio">  $ <?php echo $product['precio']; ?>
              </button>
              <!--<form method="post" action="platillo.php?action=add&id=<?php echo $product['id']; ?>">-->
                     <form method="post" action="platillo.php?id=<?php echo $product['id']; ?>">
                         <div class="productos">
-
-
+                            
+                        
                             <div class="col-4" id="columnas">
-
+                          
                             <input  type="text" name="cantidad" class="form-control text-center" min="1" max="10" pattern="^[0-9]+"/>
 
-
-
+                          
+                          
                             <input type="hidden" name="nombre" value="<?php echo $product['nombre']; ?>" />
                             <input type="hidden" name="precio" value="<?php echo $product['precio']; ?>" />
                           <input id="guardar" type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success"
@@ -137,23 +134,23 @@ function pre_r($array){
                 <?php
                 endwhile;
             endif;
-        endif;
+        endif;   
         ?>
-        <div style="clear:both"></div>
-        <br />
-
+        <div style="clear:both"></div>  
+        <br />  
+        
         </div>
 
 
         <div class="container" id="hola">
-
+   
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">Menu</h3>
                         <div class="pull-right">
-
+                            
                         </div>
                     </div>
                    <form action="guardar.php" method="post">
@@ -161,56 +158,56 @@ function pre_r($array){
                     <table class="table table-hover text-center" id="dev-table">
                         <thead>
                             <tr>
-                                <th width="40%">NOMBRE  </th>
-                                <th width="10%">CANTIDAD</th>
-                                <th width="20%">PRECIO</th>
-                                <th width="15%">TOTAL</th>
-
-                                <th class="text-center" width="5%"><img src="img/remove.png"></th>
-
+                                <th width="40%">NOMBRE  </th>  
+                                <th width="10%">CANTIDAD</th>  
+                                <th width="20%">PRECIO</th>  
+                                <th width="15%">TOTAL</th>  
+                              
+                                <th class="text-center" width="5%"><img src="im/remove.png"></th>
+                                
                             </tr>
-                              <?php
-        if(!empty($_SESSION['shopping_cart'])):
-
-             $total = 0;
-
-             foreach($_SESSION['shopping_cart'] as $key => $product):
-        ?>
-        <tr>
-           <td>
+                              <?php   
+        if(!empty($_SESSION['shopping_cart'])):  
+            
+             $total = 0;  
+        
+             foreach($_SESSION['shopping_cart'] as $key => $product): 
+        ?>  
+        <tr>  
+           <td>  
             <input style="border:none" type="text" name="producto['nombre']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="<?php echo $product['nombre']; ?>">
-             </td>
+             </td> 
 
            <td>
              <input style="border:none" type="text" name="producto['cantidad']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="<?php   echo $product['cantidad']; ?>">
-           </td>
+           </td> 
            <td>
             <input style="border:none" type="text" name="producto['precio']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" readonly value=" $ <?php echo $product['precio']; ?>">
 
-           </td>
+           </td>  
            <td>
             <input style="border:none" type="text" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value=" $ <?php echo number_format($product['cantidad'] * $product['precio'], 2); ?>">
-           </td>
+           </td>  
            <td>
            <!-- <a id="eliminar" href="platillo.php?action=delete&id=<?php echo $product['id']; ?>">-->
-            <a id="eliminar"  href="platillo.php?action=delete&id=<?php echo $product['id']; ?>"><img src="img/eliminar.svg" width="20" height="20"></a>
+            <a id="eliminar"  href="platillo.php?action=delete&id=<?php echo $product['id']; ?>"><img src="im/eliminar.svg" width="20" height="20"></a>
+            
+           </td>  
+        </tr>  
 
-           </td>
-        </tr>
-
-        <?php
-                  $total = $total + ($product['cantidad'] * $product['precio']);
-             endforeach;
-        ?>
-        <tr>
-             <td colspan="3" align="right"></td>
+        <?php  
+                  $total = $total + ($product['cantidad'] * $product['precio']);  
+             endforeach;  
+        ?>  
+        <tr>  
+             <td colspan="3" align="right"></td>  
              <td align="pull-right">
              <h4>total</h4>
              <input style="border:none" type="text" name="producto['total']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value=" $<?php   echo number_format($total, 2); ?> ">
-             </td>
+             </td>  
              <td>
-
-             </td>
+              
+             </td>  
 
 
         </tr>
@@ -219,7 +216,7 @@ function pre_r($array){
         <tr>
             <!-- Show checkout button only if the shopping cart is not empty -->
             <td colspan="5">
-             <?php
+             <?php 
                 if (isset($_SESSION['shopping_cart'])):
                 if (count($_SESSION['shopping_cart']) > 0):
 
@@ -227,39 +224,39 @@ function pre_r($array){
 
              <input type="submit" id="eli">
              <a href="#"  class="button" id="btn-en"><img src="im/enviar.svg" width="20" height="20" alt="Enviar Pedido"></a>
-
-
-
+              
+             
+       
              <?php endif; endif; ?>
             </td>
         </tr>
-        <?php
+        <?php  
         endif;
-        ?>
+        ?>  
 
 
                         </thead>
-
+                        
                     </table>
                     </form>
 
 
-
+                    
                 </div>
             </div>
-
-        </div>
+           
+        </div>        
     </div>
-
-
+            
+            
 
 
     </body>
-    <script>
-
+    <script>  
+  
     /*$(document).ready(function(){
         $("#eli").click(function(){
-
+        
              var trs=$("#dev-table tr").length;
             if(trs>1)
             {
@@ -267,7 +264,7 @@ function pre_r($array){
                 $("#dev-table tr").remove();
 
             }
-
+            
         });
     });¨/
     </script>
@@ -275,3 +272,5 @@ function pre_r($array){
 
 
 </html>
+
+
