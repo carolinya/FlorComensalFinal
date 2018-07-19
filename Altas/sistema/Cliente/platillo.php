@@ -87,7 +87,7 @@ function pre_r($array){
 
         <?php
 
-        $connect = mysqli_connect('localhost', 'root', '', 'comensal');
+        $connect = mysqli_connect('localhost', 'root', 'RARO97', 'comolaflor2');
         $query = 'SELECT * FROM platillos ORDER by id ASC';
         $result = mysqli_query($connect, $query);
 

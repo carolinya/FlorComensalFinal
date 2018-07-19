@@ -14,6 +14,7 @@
     <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
     <meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
     <meta name="author" content="FreeHTML5.co" />
+    <link rel="stylesheet" href="css/estilocarta.css">
 
     <!--
 												//////////////////////////////////////////////////////
@@ -33,122 +34,77 @@
 </head>
 
 <body>
-    <div id="fh5co-page">
-        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-        <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+  <div class="container-fluid">
+    
+        <section>
+         <br><br>
+           <a id="menu1"><h2 class="text-center">PLATILLOS</h2></a>
+           <hr>
+           <div class="container-fluid" id="contenido">
+         
+           </div>
+        </section>
 
-            <h1 id="fh5co-logo"><a href="index.html">LA FLOR DEL COMENSAL</a></h1>
-            <nav id="fh5co-main-menu" role="navigation">
-                <ul>
-                    <li><a href="index.html">ESPECIALIDADES DE LA CASA</a></li>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <li><a href="salir.php"><img class="close" src="" alt="" title="Salir">Cerrar Sesion</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <div id="fh5co-main">
-            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2>Pedido Platillo</h2>
-                    </div>
-                </div>
-                <!--
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Nombre Completo</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Correo</label>
-                            <input type="email" class="form-control" id="inputPassword4" placeholder="Correo" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="inputEmail4">Celular</label>
-                            <input type="tel" class="form-control" pattern="[0-9]{10}" placeholder="Celular" required>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputPassword4">Numero de Personas</label>
-                            <input type="number" name="quantity" min="1" max="500" class="form-control" id="inputPassword4" placeholder="Numero de Personas" required>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputPassword4">Tipo de Evento</label>
-                            <select id="inputState" class="form-control" required>
-                                    <option selected></option>
-                                    <option>Casual</option>
-                                    <option>Negocios</option>
-                                    <option>Aniversario</option>
-                                    <option>Compromiso</option>
-                                  </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-2">
-                            <label for="inputPassword4">Fecha</label>
-                            <br>
-                            <form action="" method="">
-                                <input type="date" required>
-                            </form>
-                            <br>
-                            <br>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputPassword4">Hora</label>
-                            <br>
-                            <input type="time" required>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="fh5co-more-contact">
-                <div class="fh5co-narrow-content">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                                <div class="fh5co-icon">
-                                    <i class="icon-map"></i>
-                                </div>
-                                <div class="fh5co-text">
-                                    <p> Avenida Vallarta Eje Poniente 1110, Americana, 44160 Guadalajara, Jal.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                                <div class="fh5co-icon">
-                                    <i class="icon-phone"></i>
-                                </div>
-                                <div class="fh5co-text">
-     w                               <p><a href="tel://">(01)33 1605 8737</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        --> </div>
-        </div>
-        
-    </div>
+        <section>
+          <br>
+           <a id="menu2"><h2 class="text-center">POSTRES</h2></a>
+           <hr>
+           <div class="container-fluid" id="contenido2">
+         
+           </div>
+        </section>
+
+        <section>
+          <br>
+           <a id="menu3"><h2 class="text-center">BEBIDAS</h2></a>
+           <hr>
+           <div class="container-fluid" id="contenido3">
+         
+           </div>
+        </section>
+
+  </div>
+  
+
+
+  </div>
+  
+  <footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+    <h4><a href="salir.php"><img class="close" src="" alt="" title="Salir">Cerrar Sesion</a></h4>
+   
+  </div>
+  
+
+</footer>
+
 
 <?php include "include/scrips.php"; ?>
 
-  <script type="text/javascript">
-      $(document).ready(function() {
-          $("#fh5co-main").load('platillo.php');
+  <script>
+
+ $(document).ready(function() {
+        $("#menu1").click(function(event) {
+          $("#contenido").load('platillo.php');
         });
-    
-    </script>
+      });
+
+$(document).ready(function() {
+        $("#menu2").click(function(event) {
+          $("#contenido2").load('platillo.php');
+        });
+      });
+
+$(document).ready(function() {
+        $("#menu3").click(function(event) {
+          $("#contenido3").load('platillo.php');
+        });
+      });
+
+  </script>
 </body>
 
 </html>
+
