@@ -45,7 +45,7 @@ if($_SESSION['rol'] == 3)
             $desde = ($pagina-1) * $por_pagina;
             $total_paginas = ceil($total_registro/$por_pagina);
 
-            $query = mysqli_query($conection,"SELECT imagen_id,nombre,precio FROM platillos order by imagen_id ASC LIMIT $desde,$por_pagina");
+            $query = mysqli_query($conection,"SELECT id,nombre,precio FROM platillos order by id ASC LIMIT $desde,$por_pagina");
 
             $result = mysqli_num_rows($query);
 
@@ -54,7 +54,7 @@ if($_SESSION['rol'] == 3)
               while($data = mysqli_fetch_array($query)){
             ?>
             <tr>
-            <td><?php echo $data["imagen_id"]; ?></td>
+            <td><?php echo $data["id"]; ?></td>
 		        <td><?php echo $data["nombre"]; ?></td>
 		        <td><?php echo $data["precio"]; ?></td>
 
