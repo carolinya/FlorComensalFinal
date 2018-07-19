@@ -20,7 +20,6 @@ if($_SESSION['rol'] == 3)
 		<a href="platillos.php" class="btn_new">Ingresar un Platillo Nuevo</a>
 		<table>
 		    <tr>
-            <th># Platillo</th>
 		        <th>Nombre del Platillo</th>
 		        <th>Precio del Platillo</th>
             <th>Acciones</th>
@@ -33,7 +32,7 @@ if($_SESSION['rol'] == 3)
             $result_register = mysqli_fetch_array($sql_registe);
             $total_registro = $result_register['total_registro'];
 
-            $por_pagina = 2;
+            $por_pagina = 15;
 
             if(empty($_GET['pagina']))
             {
@@ -45,8 +44,11 @@ if($_SESSION['rol'] == 3)
             $desde = ($pagina-1) * $por_pagina;
             $total_paginas = ceil($total_registro/$por_pagina);
 
-            $query = mysqli_query($conection,"SELECT id,nombre,precio FROM platillos order by id ASC LIMIT $desde,$por_pagina");
-
+            $query = mysqli_query($conection,
+            "SELECT nombre,precio FROM platillos UNION
+             SELECT nombre,precio FROM postres UNION
+             SELECT nombre,precio FROM bebidas
+             order by nombre ASC LIMIT $desde,$por_pagina");
             $result = mysqli_num_rows($query);
 
             if($result > 0)
@@ -54,7 +56,7 @@ if($_SESSION['rol'] == 3)
               while($data = mysqli_fetch_array($query)){
             ?>
             <tr>
-            <td><?php echo $data["id"]; ?></td>
+
 		        <td><?php echo $data["nombre"]; ?></td>
 		        <td><?php echo $data["precio"]; ?></td>
 

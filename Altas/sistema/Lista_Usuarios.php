@@ -27,34 +27,34 @@ if($_SESSION['rol'] != 1)
 		        <th>Correo</th>
 		        <th>ROl</th>
 		        <th>Acciones</th>
-		    </tr> 
+		    </tr>
 		    <?php
             //paginador
             $sql_registe = mysqli_query($conection, "SELECT COUNT(*) as total_registro FROM usuario WHERE estatus = 1");
-            
+
             $result_register = mysqli_fetch_array($sql_registe);
             $total_registro = $result_register['total_registro'];
-            
-            $por_pagina = 2;
-            
+
+            $por_pagina = 10;
+
             if(empty($_GET['pagina']))
             {
                 $pagina = 1;
             }else{
                 $pagina = $_GET['pagina'];
             }
-            
+
             $desde = ($pagina-1) * $por_pagina;
             $total_paginas = ceil($total_registro/$por_pagina);
-            
+
             $query = mysqli_query($conection,"SELECT u.idusuario,u.nombre,u.correo,u.usuario,r.rol FROM usuario u INNER JOIN rol r ON u.rol = r.idrol WHERE estatus = 1 ORDER BY u.idusuario ASC LIMIT $desde,$por_pagina");
-            mysqli_close($conection);            
+            mysqli_close($conection);
             $result = mysqli_num_rows($query);
-            
+
             if($result > 0)
             {
               while($data = mysqli_fetch_array($query)){
-            ?>    
+            ?>
             <tr>
 		        <td><?php echo $data["idusuario"]; ?></td>
 		        <td><?php echo $data["nombre"]; ?></td>
@@ -68,23 +68,23 @@ if($_SESSION['rol'] != 1)
 		            <a class="link_delete" href="Eliminar_Confirmar_Usuario.php?id=<?php echo $data["idusuario"]; ?>">Eliminar</a>
 		            <?php } ?>
 		        </td>
-		    </tr> 
-            <?php    
-              }  
+		    </tr>
+            <?php
+              }
             }
-            
+
             ?>
 
 		</table>
 		<div class="paginador">
 		    <ul>
-            <?php 
+            <?php
                 if($pagina != 1)
                 {
                 ?>
 		        <li><a href="?pagina=<?php echo 1; ?>">|<</a></li>
 		        <li><a href="?pagina=<?php echo $pagina-1; ?>"><<</a></li>
-		        <?php 
+		        <?php
                 }
                 for($i=1; $i <= $total_paginas; $i++)
                 {
@@ -92,9 +92,9 @@ if($_SESSION['rol'] != 1)
                     {
                         echo '<li class="pageSelected">'.$i.'</li>';
                     }else{
-                      echo '<li><a href="?pagina='.$i.'">'.$i.'</a></li>';  
+                      echo '<li><a href="?pagina='.$i.'">'.$i.'</a></li>';
                     }
-                    
+
                 }
                 if($pagina != $total_paginas)
                 {
@@ -106,6 +106,6 @@ if($_SESSION['rol'] != 1)
 		    </ul>
 		</div>
 	</section>
-	<?php include "includes/footer.php"; ?>	
+	<?php include "includes/footer.php"; ?>
 </body>
 </html>
