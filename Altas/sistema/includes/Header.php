@@ -9,7 +9,7 @@
 	<header>
 		<div class="header">
 			
-			<h1>Registros</h1>
+			<h3>Registros</h3>
 			<div class="optionsBar">
 				<p><?php echo fechaC(); ?></p>
 				<span>|</span>

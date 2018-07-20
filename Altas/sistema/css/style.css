@@ -54,7 +54,7 @@ header{
 }
 .header{
 	color: #FFF;
-	background-color: darkslateblue;
+	background-color:  #8B6415;
 	height: 35px;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -99,8 +99,8 @@ header{
     margin-left: 30px;
 }
 nav ul{
-	background-color: darkorange;
-	/*background: #05817d;*/
+	background-color: #b88318;
+	/*background: #E5B322 ;*/
 	list-style: none;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -122,14 +122,14 @@ nav a{
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: background .5s;
-	border-right: 1px solid #319B8F;
+	border-right: 1px solid white;
 }
 nav .principal > a{
     background: url(../images/arrow_bottom.png) no-repeat;
     background-position-x: 0%;
     background-position-y: 0%;
     background-size: auto auto;
-    background-position: 94% center;
+    background-position: 100% center;
     background-size: 10px;
     float: left;
 }
@@ -138,7 +138,7 @@ nav ul li:hover ul{
 }
 nav li ul{
 	/*background: #177470;*/
-	background-color:brown;
+	background-color:#E5B322;
 	display: none;
 	flex-direction: column;
 	position: absolute;

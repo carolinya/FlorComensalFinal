@@ -1,46 +1,67 @@
-<nav>
+<nav class="navbar navbar-default">
 			<ul>
 				<li><a href="index.php">Inicio</a></li>
-				<li class="principal">
+				
 				<?php
                     if($_SESSION['rol'] == 1){
                     ?>
-
-					<a href="#">Empleados</a>
-					<ul>
+<li class="principal">
+					<div class="btn-group">
+	 					<a type="button" class="btn btn-default dropdown-toggle "data-toggle="dropdown">
+					Empleados<span class="caret"></span>
+	  					</a>
+					<ul class="dropdown-menu" role="menu">
 						<li><a href="Registro_Usuario.php">Registro de Empleados</a></li>
 						<li><a href="Lista_Usuarios.php">Lista de Empleados</a></li>
 					</ul>
+				</div>
 				</li>
 				<?php } ?>
+
+
 				<?php
                     if($_SESSION['rol'] == 2 || $_SESSION['rol']==1){
 
 
                       ?>
-				<li class="principal">
-					<a href="#">Reservaciones</a>
-					<ul>
+					<li class="principal">
+					<div class="btn-group">
+	 					<a type="button" class="btn btn-default dropdown-toggle "data-toggle="dropdown">
+					Reservaciones <span class="caret"></span>
+	  					</a>
+					 <ul class="dropdown-menu" role="menu">
 						<li><a href="lista_reservaciones.php">Lista de Reservaciones</a></li>
 					</ul>
+					</div>
 				</li>
 				<?php }  ?>
+
+
 				<?php
                     if($_SESSION['rol'] == 3 || $_SESSION['rol']==1){
 
                       ?>
-				<li class="principal">
-					<a href="#">Registro Platillos</a>
-					<ul>
+			<li class="principal">
+					<div class="btn-group">
+	 					<a type="button" class="btn btn-default dropdown-toggle "data-toggle="dropdown">
+	    							Registro de Platillos <span class="caret"></span>
+	  					</a>
+	  					 <ul class="dropdown-menu" role="menu">
 						<li><a href="platillos.php">Nuevos Platillos</a></li>
 						<li><a href="lista_platillos.php">Lista de Platillos</a></li>
-					</ul>
+
+						</ul>
+					</div>
 				</li>
 				<?php }  ?>
+
+
 				<?php
                     if($_SESSION['rol'] ==4 ){
                         header("location: Cliente/reservaciones.php");
                       ?>
+
+
 				<li class="principal">
 					<a href="#">Ordenar Pedidos</a>
 					<ul>
@@ -49,17 +70,33 @@
 					</ul>
 				</li>
 				<?php }  ?>
+
+
+
 				<?php
                     if($_SESSION['rol'] == 3 || $_SESSION['rol']==1){
 
                       ?>
 				<li class="principal">
-					<a href="#">Facturas</a>
-					<ul>
-						<li><a href="#">Nuevo Factura</a></li>
-						<li><a href="#">Facturas</a></li>
-					</ul>
+					<div class="btn-group">
+	 					<a type="button" class="btn btn-default dropdown-toggle "data-toggle="dropdown">
+	    							Facturas <span class="caret"></span>
+	  					</a>
+	 
+	 					 <ul class="dropdown-menu" role="menu">
+	    						<li>
+	    							<a href="#">Nueva Factura</a>
+	    						</li>
+	    						<li>
+	    							<a href="#">Facturas</a>
+	    						</li>
+	    
+	  					</ul>
+					</div>
 				</li>
 				<?php }  ?>
+
+
+
 			</ul>
 		</nav>

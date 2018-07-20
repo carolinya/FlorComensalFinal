@@ -57,17 +57,34 @@ if (!empty($_SESSION['active'])) {
     <section id="container">
        <form action="" method="post">
       <img class="img" src="sistema/img/logo.png" alt="logotipo" width="200px" height="100px">
-             <h4>Iniciar sesion</h4>
+             <h4 style="color: grey">Iniciar sesion</h4>
 
            <input type="text" name="usuario" placeholder="Usuario">
            <input type="password" name="clave" placeholder="contraseña">
            <input type="submit" value="Ingresar">
-           <a href="" ><center>Salir</center></a>
+           <a href=""  style="color: grey" ><center>Salir</center></a>
            <div class="alert"> <?php echo isset($alert) ? $alert : '' ?></div>
-
+ <div class="form-group col-md-12">
+                            <h4 style="color: grey">Mesa</h4>
+                            <select name="tipo" class="form-control" required>
+                                    <option selected></option>
+                                    <option><h4 style="color: grey">Mesa 1</h4></option>
+                                    <option><h4 style="color: grey">Mesa 2</h4></option>
+                                    <option><h4 style="color: grey">Mesa 3</h4></option>
+                                    <option><h4 style="color: grey">Mesa 4</h4></option>
+                                    <option><h4 style="color: grey">Mesa 5</h4></option>
+                                    <option><h4 style="color: grey">Mesa 6</h4></option>
+                                  </select>
+                        </div>
            
        </form>
+
     </section>
+
+
+
+
+
 </body>
 </html>
 
