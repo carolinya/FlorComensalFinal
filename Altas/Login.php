@@ -55,7 +55,7 @@ if (!empty($_SESSION['active'])) {
 </head>
 <body>
     <section id="container">
-       <form action="" method="post">
+      <form action="" method="post">
       <img class="img" src="sistema/img/logo.png" alt="logotipo" width="200px" height="100px">
              <h4 style="color: grey">Iniciar sesion</h4>
 
