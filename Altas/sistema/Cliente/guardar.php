@@ -54,7 +54,7 @@ foreach ($producto as $key => $value) {
 
       <div class="col-md-4 mt-5">
         <div class="card text-center">
-          <img class="card-img-top" src="im/logo.png" alt="Card image cap">
+          <img class="card-img-top" src="img/logo.png" alt="Card image cap">
         <div class="card-body">
           <h3 class="card-title">Registro de la orden</h3>
           <hr>
@@ -114,7 +114,7 @@ foreach ($producto as $key => $value) {
 
              
              <a href="#"  class="button" id="btn-en">
-                <img src="im/bk.png" width="60" height="60" alt="Enviar Pedido">
+                <img src="img/bk.png" width="60" height="60" alt="Enviar Pedido">
             </a>
               
              
