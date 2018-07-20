@@ -177,18 +177,18 @@ function pre_r($array){
         ?>
         <tr>
            <td>
-            <input style="border:none" type="text" name="producto['nombre']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="<?php echo $product['nombre']; ?>">
+            <input style="border:none" type="number" name="producto['nombre']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="<?php echo $product['nombre']; ?>">
              </td>
 
            <td>
-             <input style="border:none" type="text" name="producto['cantidad']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="<?php   echo $product['cantidad']; ?>">
+             <input style="border:none" type="number" name="producto['cantidad']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="<?php   echo $product['cantidad']; ?>">
            </td>
            <td>
-            <input style="border:none" type="text" name="producto['precio']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" readonly value=" $ <?php echo $product['precio']; ?>">
+            <input style="border:none" type="number" name="producto['precio']" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" readonly value=" $ <?php echo $product['precio']; ?>">
 
            </td>
            <td>
-            <input style="border:none" type="text" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value=" $ <?php echo number_format($product['cantidad'] * $product['precio'], 2); ?>">
+            <input style="border:none" type="number" class="form-control text-center" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value=" $ <?php echo number_format($product['cantidad'] * $product['precio'], 2); ?>">
            </td>
            <td>
            <!-- <a id="eliminar" href="platillo.php?action=delete&id=<?php echo $product['id']; ?>">-->
