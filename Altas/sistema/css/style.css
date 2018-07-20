@@ -122,7 +122,7 @@ nav a{
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: background .5s;
-	border-right: 1px solid white;
+	border-right: 1px solid darkred;
 }
 nav .principal > a{
     background: url(../images/arrow_bottom.png) no-repeat;
@@ -159,6 +159,7 @@ nav li ul li:last-child{
 	overflow: hidden;
 }
 #container{
+    
 	padding: 90px 15px 15px;
 }
 /*****************************************************************/

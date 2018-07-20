@@ -62,8 +62,9 @@ if (!empty($_SESSION['active'])) {
            <input type="text" name="usuario" placeholder="Usuario">
            <input type="password" name="clave" placeholder="contraseña">
            <input type="submit" value="Ingresar">
-           <a href=""  style="color: grey" ><center>Salir</center></a>
+         
            <div class="alert"> <?php echo isset($alert) ? $alert : '' ?></div>
+           
  <div class="form-group col-md-12">
                             <h4 style="color: grey">Mesa</h4>
                             <select name="tipo" class="form-control" required>
@@ -76,7 +77,7 @@ if (!empty($_SESSION['active'])) {
                                     <option><h4 style="color: grey">Mesa 6</h4></option>
                                   </select>
                         </div>
-           
+             <a href=""  style="color: grey" ><center>Salir</center></a>
        </form>
 
     </section>

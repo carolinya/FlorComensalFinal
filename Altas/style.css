@@ -16,7 +16,11 @@ h4 {
 
 
 #container{
-    background-color: white;
+        background-image: url(sistema/img/QUINTONIL.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width: 100%;
     height: 100vh;
     display: -webkit-flex;
@@ -60,9 +64,10 @@ h4 {
     
 }
 .alert{
-    font-family: cursive;
+    font-family: Arial;
     font-size: 16px;
     text-align: center;
+    color: grey;
 }
 
 
