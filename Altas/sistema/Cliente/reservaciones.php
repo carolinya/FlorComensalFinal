@@ -34,40 +34,13 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" id="contenedor">
     
-        <section>
-         <br><br>
-           <a id="menu1"><h2 class="text-center">PLATILLOS</h2></a>
-           <hr>
-           <div class="container-fluid" id="contenido">
-         
-           </div>
-        </section>
-
-        <section>
-          <br>
-           <a id="menu2"><h2 class="text-center">POSTRES</h2></a>
-           <hr>
-           <div class="container-fluid" id="contenido2">
-         
-           </div>
-        </section>
-
-        <section>
-          <br>
-           <a id="menu3"><h2 class="text-center">BEBIDAS</h2></a>
-           <hr>
-           <div class="container-fluid" id="contenido3">
-         
-           </div>
-        </section>
-
+        
   </div>
   
 
 
-  </div>
   
   <footer class="page-footer font-small blue">
 
@@ -85,23 +58,15 @@
 
   <script>
 
- $(document).ready(function() {
-        $("#menu1").click(function(event) {
-          $("#contenido").load('platillo.php');
-        });
-      });
+    
 
-$(document).ready(function() {
-        $("#menu2").click(function(event) {
-          $("#contenido2").load('platillo.php');
+         $(document).ready(function() {
+        
+          $("#contenedor").load('platillo.php');
         });
-      });
-
-$(document).ready(function() {
-        $("#menu3").click(function(event) {
-          $("#contenido3").load('platillo.php');
-        });
-      });
+  
+   
+   
 
   </script>
 </body>

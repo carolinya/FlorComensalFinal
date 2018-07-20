@@ -165,7 +165,7 @@ function pre_r($array){
                                 <th width="20%">PRECIO</th>
                                 <th width="15%">TOTAL</th>
 
-                                <th class="text-center" width="5%"><img src="im/remove.png"></th>
+                                <th class="text-center" width="5%"><img src="img/remove.png"></th>
 
                             </tr>
                               <?php
@@ -192,7 +192,7 @@ function pre_r($array){
            </td>
            <td>
            <!-- <a id="eliminar" href="platillo.php?action=delete&id=<?php echo $product['id']; ?>">-->
-            <a id="eliminar"  href="platillo.php?action=delete&id=<?php echo $product['id']; ?>"><img src="im/eliminar.svg" width="20" height="20"></a>
+            <a id="eliminar"  href="platillo.php?action=delete&id=<?php echo $product['id']; ?>"><img src="img/eliminar.svg" width="20" height="20"></a>
 
            </td>
         </tr>
@@ -225,7 +225,7 @@ function pre_r($array){
              ?>
 
              <input type="submit" id="eli">
-             <a href="#"  class="button" id="btn-en"><img src="im/enviar.svg" width="20" height="20" alt="Enviar Pedido"></a>
+             <a href="#"  class="button" id="btn-en"><img src="img/enviar.svg" width="20" height="20" alt="Enviar Pedido"></a>
 
 
 
