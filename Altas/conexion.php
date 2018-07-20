@@ -1,8 +1,8 @@
 <?php
 $host     = 'localhost';
 $user     = 'root';
-$password = 'RARO97';
-$db       = 'comolaflor2';
+$password = '';
+$db       = 'comensal';
 
 $conection = @mysqli_connect($host, $user, $password, $db);
 if (!$conection) {
