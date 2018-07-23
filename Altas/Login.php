@@ -1,20 +1,15 @@
-
-
-
-
-
-
 <?php
 
 $alert = '';
 session_start();
 if (!empty($_SESSION['active'])) {
-    header('location: sistema/');
+    header('location: System/');
 } else {
 
     if (!empty($_POST)) {
         if (empty($_POST['usuario']) || empty($_POST['clave'])) {
             $alert = 'Ingrese su usuario y contraseña';
+            
         } else {
             require_once "conexion.php";
             $user = mysqli_real_escape_string($conection, $_POST['usuario']);
@@ -27,15 +22,18 @@ if (!empty($_SESSION['active'])) {
             if ($result > 0) {
                 $data               = mysqli_fetch_array($query);
                 $_SESSION['active'] = true;
-                $_SESSION['idUser'] = $data['idUsuario'];
+                $_SESSION['idusuario'] = $data['idusuario'];
                 $_SESSION['nombre'] = $data['nombre'];
-                $_SESSION['email']  = $data['email'];
-                $_SESSION['user']   = $data['usuario'];
+                $_SESSION['correo']  = $data['correo'];
+                $_SESSION['usuario']   = $data['usuario'];
                 $_SESSION['rol']    = $data['rol'];
-
-                header('location: sistema/');
+            
+            header('location: System/');
+            if($_SESSION['rol'] ==4 ){
+            header("location:Cliente/reservaciones.php"); 
+            }
             } else {
-                $alert = 'Usuario y/o contraseña incorrecta';
+                $alert = 'Usurio y/o contraseña incorrecta';
                 session_destroy();
             }
         }
@@ -56,12 +54,12 @@ if (!empty($_SESSION['active'])) {
 <body>
     <section id="container">
       <form action="" method="post">
-      <img class="img" src="sistema/img/logo.png" alt="logotipo" width="200px" height="100px">
+      <img class="img" src="assets/img/logo.png" alt="logotipo" width="200px" height="100px">
              <h4 style="color: grey">Iniciar sesion</h4>
 
            <input type="text" name="usuario" placeholder="Usuario">
            <input type="password" name="clave" placeholder="contraseña">
-           <div class="form-group col-md-12">
+          <!-- <div class="form-group col-md-12">
                                       <h4 style="color: grey">Mesa</h4>
                                       <select name="tipo" class="form-control" required>
                                               <option selected></option>
@@ -72,7 +70,7 @@ if (!empty($_SESSION['active'])) {
                                               <option><h4 style="color: grey">Mesa 5</h4></option>
                                               <option><h4 style="color: grey">Mesa 6</h4></option>
                                             </select>
-            </div>
+            </div>-->
             <br>
             <br>
            <input type="submit" value="Ingresar">
