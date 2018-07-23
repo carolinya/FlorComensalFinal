@@ -1,0 +1,7 @@
+{
+
+"requiere":{
+	"spipu/html2pdf": "5.*"
+}
+
+}
