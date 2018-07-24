@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'Model/conexion.php';
+require_once 'Modelo/conexion.php';
 
  class Datos{
        
@@ -49,7 +49,7 @@ require_once 'Model/conexion.php';
     }
      
      public function totalReservasModel($tabla){
-      date_default_timezone_set('America/Argentina/Buenos_Aires');
+      date_default_timezone_set('America/Mexico_City');
           $fecha = date('Y-m-d').'<br>';
          $sql=Conexion::conectar()->prepare("SELECT * , COUNT(*) as total FROM $tabla WHERE diallegada >= '$fecha'");
          $sql->execute();
@@ -58,7 +58,7 @@ require_once 'Model/conexion.php';
       }
 
      public function editarReservasModel($datosModel,$tabla){
-        date_default_timezone_set('America/Argentina/Buenos_Aires');
+        date_default_timezone_set('America/Mexico_City');
         $sql=Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE idreserva = :idreserva");
         $sql->bindParam(':idreserva',$datosModel, PDO::PARAM_INT);
         $sql->execute();

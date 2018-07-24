@@ -1,7 +1,7 @@
 <div class="container">
 	
 <?php
- require_once 'Views/modules/ventas/conexion.php'; 
+ require_once 'Vistas/modules/ventas/conexion.php'; 
  require_once("dompdf/dompdf_config.inc.php");
 ob_start();
 

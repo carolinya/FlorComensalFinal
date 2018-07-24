@@ -1,5 +1,5 @@
 <?php  
- require_once 'Views/modules/ventas/conexion.php';
+ require_once 'Vistas/modules/ventas/conexion.php';
 ?>
   <div class="modal fade bd-example-modal-lg" id="productos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -43,12 +43,12 @@
               <input type="text" class="form-control" id="recipient-name" name="precio" required="">
             </div>
             </div>
-           <!--  <div class="col-md-6"> 
+             <div class="col-md-6"> 
              <div class="form-group">
               <label for="recipient-name" class="form-control-label">Imagen :</label>
               <input type="file" class="form-control" id="recipient-name" name="imagen">
             </div>
-            </div>-->
+            </div>            
         </div>
         
          <div class="row">

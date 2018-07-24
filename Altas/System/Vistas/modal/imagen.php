@@ -1,7 +1,8 @@
 
 <?php
-// Conexion a la base de datos 
- require_once 'Views/modules/ventas/conexion.php';
+// Conexion a la base de datos
+$con=mysqli_connect('localhost','root','tlahuitoltepec') or die(mysqli_error());
+mysqli_select_db($con,'laflor') or die(mysqli_error());
 
 // Comprobamos si ha ocurrido un error.
 if (!isset($_FILES["imagen"]) || $_FILES["imagen"]["error"] > 0)
@@ -33,19 +34,18 @@ else
         // $data=file_get_contents($imagen_temporal);
 
         // Escapamos los caracteres para que se puedan almacenar en la base de datos correctamente.
-        $data = mysqli_escape_string($conection,$data);
-       $nombre=$_POST['nombreproducto'];
-        $categoria=$_POST['idcategoria']
-       $usuario=$_POST['idusuario'];
+        $data = mysqli_escape_string($con,$data);
+        $nombre=$_POST['nombre'];
         $precio=$_POST['precio'];
+        $come=$_POST['come'];
       //  $descripcion=$_POST['descripcion'];
 
         // Insertamos en la base de datos.
-        $resultado = mysqli_query($conexion,"INSERT INTO productos (nombreproducto,idcategoria,idusuario,precio,imagen,tipo_imagen) VALUES ('$nombre','$categoria','$usuario','$precio','$data','$tipo')");
+        $resultado = mysqli_query($con,"INSERT INTO platillos (nombre,precio,descripcion,imagen,tipo_imagen) VALUES ('$nombre','$precio','$come','$data','$tipo')");
 
         if ($resultado)
         {
-          header("location:modal_productos.php");
+          header("location:platillos.php");
         }
         else
         {

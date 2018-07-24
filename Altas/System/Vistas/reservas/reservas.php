@@ -61,7 +61,7 @@
     </form>
   </div>
   <div class="col-md-2">
-<?php require 'Views/modal/modal_reserva.php'; ?>
+<?php require 'Vistas/modal/modal_reserva.php'; ?>
   <div class="alert alert-success" role="alert">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reserva" data-whatever="@mdo">
   Hacer Reserva Nueva

@@ -1,6 +1,6 @@
 <?php  
 
- require_once 'Model/conexion.php';
+ require_once 'Modelo/conexion.php';
 
  class CategoriasModel{
          

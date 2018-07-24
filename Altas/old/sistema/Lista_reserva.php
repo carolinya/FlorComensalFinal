@@ -15,7 +15,7 @@ ob_start();
    	 	 header("location:$tabla");
 }
  if (isset($_POST['agregarBebidas'])) {
- 	date_default_timezone_set('America/Argentina/Buenos_Aires');
+ 	date_default_timezone_set('America/Mexico_City');
  	$fecha = $_POST['fecha'];
  	// echo $fecha;
  	$usu = $_POST['usuario'];

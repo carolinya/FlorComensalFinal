@@ -56,8 +56,11 @@ if (isset($_GET['action'])) {
 	<table class="table table-bordered" id="tablaProductos">
 		<thead class="bg-primary">
 			<tr>
+				<td class="usuarios" align="center">ID Usuario</td>
 				<td class="usuarios" align="center">Nombre Usuario</td>
+				<td class="usuarios" align="center">Correo</td>
 				<td class="usuarios" align="center">Fecha Creado</td>
+				<td class="usuarios" align="center">Usuario</td>
 				<td class="usuarios" align="center">Acciones</td>
 			</tr>
 		</thead>
@@ -75,5 +78,5 @@ if (isset($_GET['action'])) {
     </div>
  </div>
 	
-	 <?php require 'Views/modal/modal_usuarios.php'; ?>
+	 <?php require 'Vistas/modal/modal_usuarios.php'; ?>
 </div>

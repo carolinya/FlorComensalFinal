@@ -1,1 +1,1 @@
-<?php require 'Views/modules/ventas/ventasMesas.php'; ?>
+<?php require 'Vistas/modules/ventas/ventasMesas.php'; ?>

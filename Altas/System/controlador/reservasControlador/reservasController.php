@@ -4,7 +4,7 @@ ob_start();
 class MvcController {
 
    public function plantilla(){
-   	     include 'Views/template.php';
+   	     include 'Vistas/template.php';
    }
 
   	#INTERACCIÓN DEL USUARIO
@@ -31,7 +31,7 @@ class MvcController {
 // funcion para devolver todas las reservas.
 	 	public function getReservasController(){
 
-	 		date_default_timezone_set('America/Argentina/Buenos_Aires');
+	 		date_default_timezone_set('America/Mexico_City');
 	 		$hoy = date('Y-m-d');
  		$respuesta = Datos::getReservasModel('reservas');
  			# code...

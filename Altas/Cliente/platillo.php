@@ -87,7 +87,7 @@ function pre_r($array){
 
         <?php
 
-        $connect = mysqli_connect('localhost', 'root', 'RARO97', 'comolaflor2');
+        $connect = mysqli_connect('localhost', 'root', 'tlahuitoltepec', 'laflor');
         $query = 'SELECT * FROM platillos,bebidas,postres ORDER by id ASC';
         $result = mysqli_query($connect, $query);
 

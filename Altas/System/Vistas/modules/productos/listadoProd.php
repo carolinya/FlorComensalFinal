@@ -46,7 +46,7 @@ if (isset($_GET['action'])) {
 		       <i class="fa fa-plus fa-spin"> </i> Registrar Productos Nuevos
 		  </button>
 		</div>
-		   <?php require 'Views/modal/modal_productos.php'; ?>
+		   <?php require 'Vistas/modal/modal_productos.php'; ?>
    	  </div>
    	<div class="col-md-12">
 	 <table class="table table-bordered table-hover dt-responsive" id="tablaProductos">

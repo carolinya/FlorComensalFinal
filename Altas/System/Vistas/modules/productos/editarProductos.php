@@ -1,5 +1,5 @@
 <?php  
- require_once 'Views/modules/ventas/conexion.php';
+ require_once 'Vistas/modules/ventas/conexion.php';
  $idproducto = $_GET['idproducto'];
      $consulta = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON cat.idcategoria = pro.idcategoria WHERE idproducto = $idproducto");
 ?>

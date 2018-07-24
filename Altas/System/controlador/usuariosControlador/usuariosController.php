@@ -6,11 +6,14 @@
 
  	public function getUsuariosController(){
 
- 		$respuesta = UsuariosModel::getUsuariosModel('usuarios');
+ 		$respuesta = UsuariosModel::getUsuariosModel('usuario');
  		foreach ($respuesta as $row) {
  		echo '<tr> 
-              <td align="center"> '.$row['nombreusuario'].'</td>
-              <td align="center"> '.date("d-m-Y", strtotime($row['fechacreado'])).'</td>
+            <td align="center"> '.$row['idusuario'].'</td>
+              <td align="center"> '.$row['nombre'].'</td>
+              <td align="center"> '.$row['correo'].'</td>
+              <td align="center"> '.$row['usuario'].'</td>
+              <td align="center"> '.date("d-m-Y", strtotime($row['fecha_creada'])).'</td>
 			 <td align="center"><a href="index.php?action=editarUsuarios&idusuario='.$row["idusuario"].'"<i class="fa fa-edit btn btn-primary btn-sm"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="index.php?action=usuarios&idBorrar='.$row["idusuario"].'"<i class="fa fa-trash-o btn btn-danger btn-sm"></i></a>
 					</td>
@@ -25,7 +28,7 @@
  				                       );
 
  				#pedir la informacion al modelo.
- 			$respuesta = UsuariosModel::ingresarUsuariosModel($datosController , 'usuarios');
+ 			$respuesta = UsuariosModel::ingresarUsuariosModel($datosController , 'usuario');
 
  			if ($respuesta == 'success') {
  				header('location:okUsuario');
@@ -42,7 +45,7 @@
    	 if (isset($_GET['idBorrar'])) {
    	 	$datosController = $_GET['idBorrar'];
 
-   	 	$respuesta = UsuariosModel::deleteUsuariosModel($datosController, 'usuarios');
+   	 	$respuesta = UsuariosModel::deleteUsuariosModel($datosController, 'usuario');
    	 	if ($respuesta == 'success') {
          header('location:okBorrado'); 
    	 	}
@@ -52,11 +55,11 @@
 
    public function editarUsuariosController(){
       if (isset($_POST['editarUsuario'])) {
-       $datosController = array('nombreusuario' => $_POST['nombreusuario'],
-                                 'password'     => $_POST['password'],
+       $datosController = array('usuario' => $_POST['usuario'],
+                                 'clave'     => $_POST['clave'],
                                  'idusuario'    => $_POST['idusuario']);
 
-       $respuesta = UsuariosModel::editarUsuariosModel($datosController , 'usuarios');
+       $respuesta = UsuariosModel::editarUsuariosModel($datosController , 'usuario');
 
           if ($respuesta == 'success') {
          header('location:okEdiatdoUsuarios');

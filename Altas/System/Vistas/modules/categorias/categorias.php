@@ -75,5 +75,5 @@ if (isset($_GET['action'])) {
 
   </div>
 </div>
-		   <?php require 'Views/modal/modal_categorias.php'; ?>
+		   <?php require 'Vistas/modal/modal_categorias.php'; ?>
 

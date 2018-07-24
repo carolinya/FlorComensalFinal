@@ -1,9 +1,9 @@
 <?php 
 
-require_once 'Views/modules/ventas/conexion.php';
+require_once 'Vistas/modules/ventas/conexion.php';
 
 
-	date_default_timezone_set('America/Argentina/Buenos_Aires');
+	date_default_timezone_set('America/Mexico_City');
 	if (isset($_POST['submit'])) {
 		$buscar = $_POST['buscar'];
 		$buscar= date("Y-m-d", strtotime($buscar));

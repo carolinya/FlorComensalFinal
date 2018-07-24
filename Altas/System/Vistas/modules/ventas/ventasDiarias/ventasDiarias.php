@@ -1,10 +1,10 @@
 <div class="container">
 <?php 
    
-   require 'Views/modules/ventas/conexion.php';
+   require 'Vistas/modules/ventas/conexion.php';
 
    if (isset($_POST['reporteVenta'])) {
-        date_default_timezone_set('America/Argentina/Buenos_Aires');
+        date_default_timezone_set('America/Mexico_City');
      $fechaInicial = date('d-m-Y' , strtotime( $_POST['fechaInicial']));
      $fechaFinal   = date('d-m-Y' , strtotime($_POST['fechaFinal']));
 

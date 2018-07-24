@@ -1,5 +1,5 @@
 <?php  
-    require 'Views/modules/ventas/conexion.php';
+    require 'Vistas/modules/ventas/conexion.php';
 ob_start();
 
 
@@ -15,7 +15,7 @@ ob_start();
    	 	 header("location:$tabla");
 }
  if (isset($_POST['agregarBebidas'])) {
- 	date_default_timezone_set('America/Argentina/Buenos_Aires');
+ 	date_default_timezone_set('America/Mexico_City');
  	$fecha = $_POST['fecha'];
  	// echo $fecha;
  	$usu = $_POST['usuario'];
@@ -56,7 +56,7 @@ if (isset($_POST['venta'])) {
 	<center><h1><i class="fa fa-table" aria-hidden="true"> </i> <?php echo $tabla; ?></h1>
 	<button type="button" class="btn btn-" data-toggle="modal" data-target="#bebidas" data-whatever="@mdo"><i class="fa fa-plus-square"> </i> ADICIONAR PEDIDOS </button></center>
 	
-  <?php require 'Views/modal/modal_agregar_productos.php'; ?>
+  <?php require 'Vistas/modal/modal_agregar_productos.php'; ?>
 
 
   <?php   $consult = $conexion->query("SELECT * FROM $tabla ta JOIN productos pro ON ta.idproducto = pro.idproducto  ");  ?>
