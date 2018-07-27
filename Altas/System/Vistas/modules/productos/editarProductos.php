@@ -17,7 +17,7 @@
             <div class="col-md-6">  
               <div class="form-group">
                 <label for="recipient-name" class="form-control-label">Nombre Producto:</label>
-                <input type="text" class="form-control" id="recipient-name" name="nombreproducto" value="<?php echo $key['nombreproducto'] ?>">
+                <input type="text" class="form-control" id="recipient-name" name="nombre" value="<?php echo $key['nombre'] ?>">
               </div>
             </div>
                <div class="col-md-6">  
@@ -46,7 +46,7 @@
             <div class="col-md-6"> 
              <div class="form-group">
               <label for="recipient-name" class="form-control-label">Usuario del Sistema:</label>
-              <input type="text" class="form-control" id="recipient-name"   value="<?php echo strtoupper($_SESSION['nombreusuario']); ?>" readonly="">
+              <input type="text" class="form-control" id="recipient-name"   value="<?php echo strtoupper($_SESSION['usuario']); ?>" readonly="">
             </div>
           
             </div>

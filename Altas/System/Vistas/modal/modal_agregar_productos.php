@@ -18,12 +18,12 @@
               <input type="hidden" name="usuario" value="<?php echo $key['idusuario'] ?>">
             <?php endforeach ?>
              <?php             
-            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'BEBIDAS'  order by nombreproducto asc");      
+            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'BEBIDAS'  order by nombre asc");      
             ?>
           <select class="form-control chosen-select" id="idcategoria" name="producto[]">
            <option value=""  required="" >SELECCIONA UNA BEBIDA</option> 
                 <?php foreach ($consul as $fila): ?>
-             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombreproducto'])?> 
+             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombre'])?> 
             </option>
 
               <?php endforeach ?>
@@ -32,12 +32,12 @@
 <br>
      <div class="col-md-6">
              <?php             
-            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'CARNE'  order by nombreproducto asc");      
+            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'Carnes'  order by nombre asc");      
             ?>
           <select class="form-control chosen-select" id="idcategoria" name="producto[]">
            <option value="0"  required="" >SELECCIONA PLATO DE CARNE</option> 
                 <?php foreach ($consul as $fila): ?>
-             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombreproducto'])?> 
+             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombre'])?> 
             </option>
               <?php endforeach ?>
         </select>
@@ -45,12 +45,12 @@
            <div class="col-md-6">
 <br><br>
      <?php             
-            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'POSTRES'  order by nombreproducto asc");      
+            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'Postres'  order by nombre asc");      
             ?>
           <select class="form-control chosen-select" id="idcategoria" name="producto[]">
            <option value="0"  required="" >SELECCIONA UN POSTRE</option> 
                 <?php foreach ($consul as $fila): ?>
-             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombreproducto'])?> 
+             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombre'])?> 
             </option>
               <?php endforeach ?>
         </select>
@@ -58,12 +58,12 @@
         <div class="col-md-6">
         <br><br>
      <?php             
-            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'VERDULERIAS'  order by nombreproducto asc");      
+            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'VERDULERIAS'  order by nombre asc");      
             ?>
           <select class="form-control chosen-select" id="idcategoria" name="producto[]" required="">
            <option value="0"  required="" >SELECCIONA ENSALADAS</option> 
                 <?php foreach ($consul as $fila): ?>
-             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombreproducto'])?> 
+             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombre'])?> 
             </option>
               <?php endforeach ?>
         </select>
@@ -71,12 +71,12 @@
          <div class="col-md-6">
         <br><br>
      <?php             
-            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'SERVICIO DE MESA'  order by nombreproducto asc");      
+            $consul = $conexion->query("SELECT * FROM productos pro JOIN categorias cat ON pro.idcategoria = cat.idcategoria WHERE nombrecategoria= 'SERVICIO DE MESA'  order by nombre asc");      
             ?>
           <select class="form-control chosen-select" id="idcategoria" name="producto[]">
            <option value="0"  required="" >SERVICIOS DE MESAS</option> 
                 <?php foreach ($consul as $fila): ?>
-             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombreproducto'])?> 
+             <option value="<?php echo $fila['idproducto']. '-' .  $fila['precio'] ?>"> <?php echo ucwords($fila['nombre'])?> 
             </option>
               <?php endforeach ?>
         </select>

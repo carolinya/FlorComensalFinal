@@ -3,7 +3,7 @@
 	class Conexion{
 		public function conectar(){
 			try {
-				$conexion = new PDO('mysql:host=localhost;dbname=comensal','root','tlahuitoltepec');
+				$conexion = new PDO('mysql:host=localhost;dbname=rest','root','tlahuitoltepec');
 				$conexion->exec('SET CHARACTER SET utf8');
 				$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

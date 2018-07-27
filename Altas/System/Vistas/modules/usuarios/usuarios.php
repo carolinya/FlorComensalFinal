@@ -59,8 +59,8 @@ if (isset($_GET['action'])) {
 				<td class="usuarios" align="center">ID Usuario</td>
 				<td class="usuarios" align="center">Nombre Usuario</td>
 				<td class="usuarios" align="center">Correo</td>
-				<td class="usuarios" align="center">Fecha Creado</td>
 				<td class="usuarios" align="center">Usuario</td>
+				<td class="usuarios" align="center">Fecha Creado</td>
 				<td class="usuarios" align="center">Acciones</td>
 			</tr>
 		</thead>

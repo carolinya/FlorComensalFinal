@@ -76,7 +76,7 @@ if (isset($_POST['venta'])) {
 	    <tr>  
 	      <th scope="row"><?php echo $key['idmesa'] ?></th>
 	      <td><?php echo $key['idproducto'] ?></td>
-	      <td><?php echo $key['nombreproducto'] ?></td>
+	      <td><?php echo $key['nombre'] ?></td>
 	      <td><i class="fa fa-usd"> </i> <?php echo $key['precio'] ?> <a href="index.php?action=<?php echo $tabla ?>&idmesa=<?php echo $key['idmesa']  ?>" class="pull-right" ><i class="fa fa-trash-o btn btn-danger btn-sm"></i></a> </td>
 	    </tr>
 	    

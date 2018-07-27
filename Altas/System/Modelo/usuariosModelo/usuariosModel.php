@@ -15,9 +15,9 @@
 		 }
 
       public function ingresarUsuariosModel($datosModel , $tabla){
-      	$sql = Conexion::conectar()->prepare("INSERT INTO $tabla (nombreusuario , password)VALUES(:nombreusuario,:password)");
+      	$sql = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre,correo,usuario,clave,fechacreada,idrol, )VALUES(:usuario,:clave)");
 
-      	$sql->bindParam(':nombreusuario' , $datosModel['nombreusuario'] , PDO::PARAM_STR);
+      	$sql->bindParam(':usuario' , $datosModel['usuario'] , PDO::PARAM_STR);
       	$sql->bindParam(':password' ,$datosModel['password'], PDO::PARAM_STR);
 
       	if ($sql->execute()) {
